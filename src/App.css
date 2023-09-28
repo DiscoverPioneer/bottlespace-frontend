@@ -38,6 +38,20 @@
   left: 0px;
   width: 100vw;
 }
+.Login .App-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  z-index: 22;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+}
 
 .App-link {
   color: #61dafb;
@@ -93,4 +107,29 @@
     padding-left: 1em;
     padding-right: 1em;
   }
+}
+
+.App .left {
+  float: left;
+  border: 1px solid red;
+}
+.App .right {
+  float: right;
+  border: 1px solid green;
+}
+
+.Login .App-logo {
+  pointer-events: none;
+  width: 10em;
+  padding: 0px;
+}
+
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  z-index: 22;
 }

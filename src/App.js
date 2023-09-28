@@ -6,6 +6,7 @@ import {
 import * as ReactDOM from "react-dom/client";
 //import {Link} from "react-router-dom";
 import Root from './routes/root';
+import Login from './routes/login';
 
 function App() {
   const router = createBrowserRouter([
@@ -15,7 +16,7 @@ function App() {
     },
     {
       path: "/login",
-      element: <Root/>,
+      element: <Login/>,
     }
   ]);
 
