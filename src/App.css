@@ -109,18 +109,9 @@
   }
 }
 
-.App .left {
-  float: left;
-  border: 1px solid red;
-}
-.App .right {
-  float: right;
-  border: 1px solid green;
-}
-
 .Login .App-logo {
   pointer-events: none;
-  width: 10em;
+  width: 8em;
   padding: 0px;
 }
 
@@ -132,4 +123,78 @@
   font-size: calc(10px + 2vmin);
   color: white;
   z-index: 22;
+  width: 15em;
+  padding-right: 8em;
+}
+
+.LoginForm input {
+  color: grey;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: 0.6em;
+  margin-bottom: 1em;
+  padding-bottom: 0.4em;
+  width: 20em;
+}
+.LoginForm input:active {
+  border: none;
+}
+
+
+.LoginForm .title {
+  font-size: 0.5em;
+  padding-bottom: 1.4em;
+}
+
+.App .custom-button {
+  background-color: #007AFF;
+  color: white;
+  padding: 0.5em 5.8em;
+  border-radius: 4px;
+  font-size: 0.6em;
+  margin-bottom: 1em;
+}
+
+.App .button-inactive {
+  opacity: 0.5;
+  background-color: grey;
+  border: none;
+}
+.App .button-inactive:hover {
+  cursor: not-allowed;
+}
+.App .button-active:hover {
+  cursor: pointer;
+}
+.App .button-active {
+  opacity: 1.0;
+  border: 1px solid #007AFF;
+}
+
+.App .submit {
+}
+
+.blacked-out-bg {
+  background-color: #000;
+}
+.LoginLeft {
+  align-items: left;
+  justify-content: left;
+}
+
+.LoginForm .forgot-pw {
+  font-size: 0.6em;
+}
+.LoginForm .forgot-pw:active {
+  color: #007AFF;
+}
+.LoginForm .forgot-pw:link {
+  color: #007AFF;
+}
+.LoginForm .forgot-pw:hover {
+  color: #007AFF;
+}
+.LoginForm .forgot-pw:visited {
+  color: #007AFF;
 }

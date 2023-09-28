@@ -1,16 +1,34 @@
+import React, { useRef, useState, useEffect } from 'react';
 
 function Login() {
+  const [buttonState,setButtonState] = useState('custom-button button-inactive submit');
+  const email = useRef('');
+  const pw = useRef('');
   const submitForm = () => {
     console.debug('TODO: stub');
   };
+  useEffect(() => {
+    console.debug('button state stub');
+  },[buttonState]);
+  const changed = () => {
+    console.debug(pw.current.value,email.current.value);
+    if(String(pw.current.value).length && String(email.current.value).length){
+      setButtonState('custom-button button-active submit');
+      return;
+    }
+    setButtonState('custom-button button-inactive submit');
+  };
+  
   return (
     <div className="LoginForm">
-      <h4 className="title">Bar Login</h4>
-      <input placeholder="Email" type="text" name="email"/>
-      <input placeholder="Email" type="password" name="password"/>
-      <button onClick={submitForm} className="submit">
-        Login
-      </button>
+      <span className="title">Bar Login</span>
+      <input placeholder="Email" type="text" name="email" onChange={changed} ref={email}/>
+      <input placeholder="Password" type="password" name="password" onChange={changed} ref={pw}/>
+      <div className="blacked-out-bg">
+        <button onClick={submitForm} className={buttonState}>
+          Login
+        </button>
+      </div>
       <a className="forgot-pw"
          href="/forgot-password"
       >Forgot Password?

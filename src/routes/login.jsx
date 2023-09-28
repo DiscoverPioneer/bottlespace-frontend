@@ -9,10 +9,10 @@ function Login() {
     <div className="App Login">
       <div className="App-header" style={{ backgroundImage:  `url(${background})`, backgroundSize: 'cover', backgroundRepeat:'no-repeat' }}/>
       <div className="App-content">
-        <div className="left">
+        <div className="LoginLeft">
           <LoginForm/>
         </div>
-        <div className="right">
+        <div>
           <img src={logo} className="App-logo" alt="logo" />
         </div>
       </div>

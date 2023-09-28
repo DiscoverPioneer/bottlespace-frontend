@@ -4,7 +4,6 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import * as ReactDOM from "react-dom/client";
-//import {Link} from "react-router-dom";
 import Root from './routes/root';
 import Login from './routes/login';
 
