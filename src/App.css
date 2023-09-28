@@ -3,18 +3,12 @@
 }
 
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
-}
+  width: 14em;
+  padding: 0px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +16,27 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 11;
+  opacity: 0.4;
+}
+.App-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  z-index: 22;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
 }
 
 .App-link {
@@ -34,5 +49,48 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.App .sign-up {
+  background-color: #007AFF;
+  color: white;
+  border: 1px solid #007AFF;
+  padding-top: 1.0em;
+  padding-left: 8.0em;
+  padding-right: 8.0em;
+  padding-bottom: 1.0em;
+  border-radius: 4px;
+  font-size: 0.6em;
+  margin-bottom: 1em;
+  width: 20em;
+}
+.App .sign-up:hover {
+  cursor: pointer;
+}
+.App .login:hover {
+  cursor: pointer;
+}
+.App .login {
+  width: 20em;
+  background-color: transparent;
+  border-color: #007AFF;
+  color: #007AFF;
+  border: 1px solid #007AFF;
+  padding-top: 1.0em;
+  padding-left: 8.0em;
+  padding-right: 8.0em;
+  padding-bottom: 1.0em;
+  border-radius: 4px;
+  font-size: 0.6em;
+  margin-bottom: 1em;
+}
+
+@media (max-width: 780px) {
+  .App .sign-up {
+    /*
+     * Prevents "Sign Up" from being separated by a newline.. turning into: "Sign\nUp" essentially
+     */
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }
