@@ -20,16 +20,16 @@ function Login() {
   };
   
   return (
-    <div className="LoginForm">
+    <div className="LoginForm vertical-form">
       <span className="title">Bar Login</span>
-      <input placeholder="Email" type="text" name="email" onChange={changed} ref={email}/>
-      <input placeholder="Password" type="password" name="password" onChange={changed} ref={pw}/>
+      <input className="bottlespace" placeholder="Email" type="text" name="email" onChange={changed} ref={email}/>
+      <input className="bottlespace" placeholder="Password" type="password" name="password" onChange={changed} ref={pw}/>
       <div className="blacked-out-bg">
         <button onClick={submitForm} className={buttonState}>
           Login
         </button>
       </div>
-      <a className="forgot-pw"
+      <a className="forgot-pw bottlespace-link"
          href="/forgot-password"
       >Forgot Password?
     </a>

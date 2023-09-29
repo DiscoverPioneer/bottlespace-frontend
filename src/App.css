@@ -52,6 +52,20 @@
   left: 0px;
   width: 100vw;
 }
+.Left-Right-App-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  z-index: 22;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+}
 
 .App-link {
   color: #61dafb;
@@ -114,8 +128,12 @@
   width: 8em;
   padding: 0px;
 }
-
-.LoginForm {
+.SignUp .App-logo {
+  pointer-events: none;
+  width: 8em;
+  padding: 0px;
+}
+.vertical-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,11 +145,12 @@
   padding-right: 8em;
 }
 
-.LoginForm input {
-  color: grey;
+
+input.bottlespace {
+  color: #ddd;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #333;
   font-size: 0.6em;
   margin-bottom: 1em;
   padding-bottom: 0.4em;
@@ -142,7 +161,7 @@
 }
 
 
-.LoginForm .title {
+.title {
   font-size: 0.5em;
   padding-bottom: 1.4em;
 }
@@ -182,19 +201,32 @@
   align-items: left;
   justify-content: left;
 }
-
-.LoginForm .forgot-pw {
+.slick-text {
   font-size: 0.6em;
 }
-.LoginForm .forgot-pw:active {
+
+.bottlespace-link {
+  font-size: 1.0em;
+}
+.bottlespace-link:active {
   color: #007AFF;
 }
-.LoginForm .forgot-pw:link {
+.bottlespace-link:link {
   color: #007AFF;
 }
-.LoginForm .forgot-pw:hover {
+.bottlespace-link:hover {
   color: #007AFF;
 }
-.LoginForm .forgot-pw:visited {
+.bottlespace-link:visited {
   color: #007AFF;
 }
+
+.age-verification-wrapper {
+  width: 12em;
+}
+
+.flex-left-right {
+  display: flex;
+  flex-direction: row;
+}
+
