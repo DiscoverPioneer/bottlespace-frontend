@@ -1,10 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import logo from "../img/logo.png";
 import homeLogo from "../img/Home.svg";
-import homeInactiveLogo from "../img/Home-inactive.svg";
-import detailsLogo from "../img/Workouts.svg";
+//import homeInactiveLogo from "../img/Home-inactive.svg";
+//import detailsLogo from "../img/Workouts.svg";
 import detailsInactiveLogo from "../img/Workouts-inactive.svg";
-import settingsLogo from "../img/Settings.svg";
+//import settingsLogo from "../img/Settings.svg";
 import settingsInactiveLogo from "../img/Settings-inactive.svg";
 import "../App.css";
 import "../Auth.css";
@@ -32,13 +32,12 @@ function LeftNav() {
 
   return (
     <div className="LeftNav">
-      <img src={logo} className="App-logo" alt="logo" />
-      <img src={homeLogo} alt="home" />
-      <img src={homeInactiveLogo} alt="home" />
-      <img src={detailsLogo} alt="details" />
-      <img src={detailsInactiveLogo} alt="details" />
-      <img src={settingsLogo} alt="settings" />
-      <img src={settingsInactiveLogo} alt="settings" />
+      <img src={logo} alt="logo" className="brand-logo" />
+      <div className="main-nav">
+        <img src={homeLogo} alt="home" />
+        <img src={detailsInactiveLogo} alt="details" />
+        <img src={settingsInactiveLogo} alt="settings" />
+      </div>
     </div>
   );
 }

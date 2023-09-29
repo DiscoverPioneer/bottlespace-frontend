@@ -1,18 +1,31 @@
 .Auth .LeftNav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   z-index: 22;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 10vw;
-  border: 2px solid red;
+  width: 1.4em;
+  padding-top: 0.4em;
+  padding-right: 0.4em;
+  background-color: #1C1C1C;
 }
-.Auth .LeftNav .App-logo {
-  width: 8vw;
+.Auth .LeftNav .brand-logo {
+  width: 1.5em;
+  padding-left: 0.1em;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.Auth .LeftNav img {
+  width: 0.7em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 1em;
+}
+
+.Auth .LeftNav .main-nav {
+  padding-top: 2em;
 }
