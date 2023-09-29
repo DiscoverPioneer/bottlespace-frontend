@@ -5,6 +5,8 @@ import Root from "./routes/root";
 import Login from "./routes/login";
 import SignUp from "./routes/sign-up";
 import Home from "./routes/logged-in/home";
+import Details from "./routes/logged-in/details";
+import Settings from "./routes/logged-in/settings";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,6 +25,14 @@ function App() {
     {
       path: "/auth/home",
       element: <Home />,
+    },
+    {
+      path: "/auth/details",
+      element: <Details />,
+    },
+    {
+      path: "/auth/settings",
+      element: <Settings />,
     },
   ]);
 
