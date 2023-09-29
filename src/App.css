@@ -222,11 +222,19 @@ input.bottlespace {
 }
 
 .age-verification-wrapper {
-  width: 12em;
+  width: 15em;
+  font-size: 0.8em;
+  padding-top: 1em;
 }
 
 .flex-left-right {
   display: flex;
   flex-direction: row;
+}
+
+input.age-verification {
+  vertical-align: top;
+  position: relative;
+  top: -2.0em;
 }
 

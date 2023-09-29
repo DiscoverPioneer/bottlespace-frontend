@@ -1,6 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
 
 function SignUp() {
+  /**
+   * TODO: use references to all fields and make the register button
+   * disabled/enabled depending on completeness of form
+   */
   const [buttonState,setButtonState] = useState('custom-button button-inactive submit');
   const barName = useRef('');
   const pw = useRef('');
@@ -27,13 +31,10 @@ function SignUp() {
       <input className="bottlespace" placeholder="Email" type="text" name="email" onChange={changed} ref={barName}/>
       <input className="bottlespace" placeholder="Password" type="password" name="password" onChange={changed} ref={pw}/>
       <input className="bottlespace" placeholder="Confirm Password" type="password" name="confirm-password" onChange={changed} ref={pw}/>
-      <div className="blacked-out-bg">
+      <div className="">
         <div className="flex-left-right age-verification-wrapper">
-          <input type="checkbox" name="age-verification"/>
-          <p className="slick-text">I certify that I am 21 years of age or older and
-            I am the owner of the Bar listed above, and I agree
-            to the <a href="user-agreement" className="bottlespace-link">User Agreement</a> and
-            <a href="privacy-policy" className="bottlespace-link">Privacy Policy</a>.
+          <input className="age-verification" type="checkbox" name="age-verification"/>
+          <p className="slick-text">I certify that I am 21 years of age or older and I am the owner of the Bar listed above, and I agree to the <a href="user-agreement" className="bottlespace-link">User Agreement</a> and <a href="privacy-policy" className="bottlespace-link">Privacy Policy</a>.
           </p>
         </div>
         <button onClick={submitForm} className={buttonState}>
