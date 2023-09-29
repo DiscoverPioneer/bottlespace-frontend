@@ -30,7 +30,7 @@ const setup_chart = (graph) => {
   });
   return c;
 };
-function LeftNav() {
+function CheckIns() {
   const [businessName, setBusinessName] = useState(null);
   const [chart, setChart] = useState(null);
   const [drawGraph, setDrawGraph] = useState(true);
@@ -44,9 +44,9 @@ function LeftNav() {
   }, []);
   return (
     <div className="CheckIns">
-      <canvas id="bar-graph" ref={barGraph}></canvas>
+      <canvas ref={barGraph}></canvas>
     </div>
   );
 }
 
-export default LeftNav;
+export default CheckIns;

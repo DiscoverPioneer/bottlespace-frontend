@@ -3,11 +3,12 @@ import "../App.css";
 import "../Auth.css";
 import { Link } from "react-router-dom";
 import CheckIns from './check-ins';
+import ClickThrus from './click-thrus';
 
 function LeftNav() {
   const [showSetupAccount, setShowSetupAccount] = useState(false);
   const [businessName, setBusinessName] = useState('"PDT" Please Don\'t Tell');
-  //const [showBarAnalytics, setShowBarAnalytics] = useState(false);
+  const [showBarAnalytics, setShowBarAnalytics] = useState(false);
   useEffect(() => {
     /**
      * TODO: grab data from api
@@ -21,7 +22,7 @@ function LeftNav() {
     /**
      * TODO: grab bar analytics from api
      */
-    //setShowBarAnalytics(true);
+    setShowBarAnalytics(true);
   }, []);
   return (
     <div className="HomeView">
@@ -38,11 +39,13 @@ function LeftNav() {
         )}
       </div>
       <div className="content">
+        {showBarAnalytics && (
           <div className="bar-analytics">
             <h2 className="section-tile">Bar Analytics</h2>
             <CheckIns/>
-            <p>Click Thru's go here</p>
+            <ClickThrus/>
           </div>
+        )}
       </div>
     </div>
   );
