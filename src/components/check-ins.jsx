@@ -1,28 +1,27 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "../App.css";
 import "../Auth.css";
-//import { Link } from "react-router-dom";
 import { Chart } from "chart.js/auto";
 const setup_chart = (graph) => {
   if (graph["$chartjs"]) {
     return;
   }
   const data = [
-    { year: 2010, count: 10 },
-    { year: 2011, count: 20 },
-    { year: 2012, count: 15 },
-    { year: 2013, count: 25 },
-    { year: 2014, count: 22 },
-    { year: 2015, count: 30 },
-    { year: 2016, count: 28 },
+    { month: 'Jan', count: 310 },
+    { month: 'Feb', count: 400 },
+    { month: 'Mar', count: 515 },
+    { month: 'Apr', count: 425 },
+    { month: 'May', count: 322 },
+    { month: 'Jun', count: 530 },
+    { month: 'July', count: 528 },
   ];
   let c = new Chart(graph, {
     type: "bar",
     data: {
-      labels: data.map((row) => row.year),
+      labels: data.map((row) => row.month),
       datasets: [
         {
-          label: "Acquisitions by year",
+          label: "avg per month",
           data: data.map((row) => row.count),
         },
       ],
@@ -31,19 +30,12 @@ const setup_chart = (graph) => {
   return c;
 };
 function CheckIns() {
-  const [businessName, setBusinessName] = useState(null);
-  const [chart, setChart] = useState(null);
-  const [drawGraph, setDrawGraph] = useState(true);
   const barGraph = useRef(null);
   useEffect(() => {
-    /**
-     * TODO: grab business info from api
-     */
-    setBusinessName(`"PDT" Please Don't Tell`);
-    setChart(setup_chart(barGraph.current));
+    setup_chart(barGraph.current);
   }, []);
   return (
-    <div className="CheckIns">
+    <div className="CheckIns AppGraph">
       <canvas ref={barGraph}></canvas>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "../App.css";
 import "../Auth.css";
 //import { Link } from "react-router-dom";
@@ -8,16 +8,16 @@ const setup_chart = (graph) => {
     return;
   }
   const data = {
-    labels: ["Red", "Blue", "Yellow",],
+    labels: ["Clicks", "Impression",],
     datasets: [
       {
-        label: "Dataset 1",
-        data: [80,70,60],
+        label: `Click Thru's`,
+        data: [80,70,],
         backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(255, 205, 86)',
+          '#165BAA',
+          '#63ABFD',
         ],
+        borderColor: '63ABFD',
         hoverOffset: 4,
       },
     ],
@@ -32,8 +32,8 @@ const setup_chart = (graph) => {
           position: "top",
         },
         title: {
-          display: true,
-          text: "Chart.js Doughnut Chart",
+          display: false,
+          text: "",
         },
       },
     },
@@ -42,17 +42,12 @@ const setup_chart = (graph) => {
   return c;
 };
 function ClickThrus() {
-  const [businessName, setBusinessName] = useState(null);
   const barGraph = useRef(null);
   useEffect(() => {
-    /**
-     * TODO: grab business info from api
-     */
-    setBusinessName(`"PDT" Please Don't Tell`);
     setup_chart(barGraph.current);
   }, []);
   return (
-    <div className="ClickThrus">
+    <div className="ClickThrus AppGraph">
       <canvas ref={barGraph}></canvas>
     </div>
   );

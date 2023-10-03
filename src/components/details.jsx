@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import "../App.css";
 import "../Auth.css";
 import { Link } from "react-router-dom";
-import CheckIns from './check-ins';
-import ClickThrus from './click-thrus';
+import GeneralDetails from './general-details';
 import Tile from './tile';
 
-function LeftNav() {
+function DetailsView() {
   const [showSetupAccount, setShowSetupAccount] = useState(false);
   const [businessName, setBusinessName] = useState('"PDT" Please Don\'t Tell');
   const [showBarAnalytics, setShowBarAnalytics] = useState(false);
   const [taskCounter,setTaskCounter] = useState('3 tasks');
+  const [showMobilePreview,setShowMobilePreview] = useState(true);
   useEffect(() => {
     /**
      * TODO: grab data from api
@@ -34,7 +34,7 @@ function LeftNav() {
   return (
     <div className="HomeView">
       <div className="header">
-        <h1 className="business-name">{businessName}</h1>
+        <h1 className="business-name">Bar Details</h1>
         {showSetupAccount && (
           <>
           <h2 className="section-title">Setup Your Account</h2>
@@ -50,16 +50,10 @@ function LeftNav() {
         )}
       </div>
       <div className="content">
-        {showBarAnalytics && (
-          <div className="bar-analytics">
-            <h2 className="section-title">Bar Analytics</h2>
-            <div className="analytics-tiles">
-              <CheckIns/>
-              <ClickThrus/>
-            </div>
-          </div>
-        )}
+        <GeneralDetails/>
       </div>
+      {showMobilePreview && (
+        <>
       <div className="right-nav">
         <div className="mobile-preview">
           <h2 className="section-title">Mobile Preview</h2>
@@ -69,8 +63,10 @@ function LeftNav() {
           </p>
         </div>
       </div>
+    </>
+      )}
     </div>
   );
 }
 
-export default LeftNav;
+export default DetailsView;

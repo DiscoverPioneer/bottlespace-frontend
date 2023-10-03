@@ -29,3 +29,116 @@
 .Auth .LeftNav .main-nav {
   padding-top: 2em;
 }
+.Auth .setup-tiles {
+  display: flex;
+  flex-direction: row;
+}
+
+.Auth .analytics-tiles {
+  display: flex;
+  flex-direction: row;
+}
+.Auth .analytics-tiles .AppGraph {
+  width: 30em;
+  height: 20em;
+  border: 1px solid #222;
+  margin: 0.5em 1em;
+  padding: 0.8em 1em;
+  background-color: #1C1C1C;
+}
+.Auth .analytics-tiles .ClickThrus {
+  width: 20em;
+}
+
+.section-title {
+  text-align: left;
+  font-weight: 500;
+}
+.Auth .content {
+  padding-left: 5em;
+}
+.Auth .header {
+  padding-left: 5em;
+}
+
+.Auth .business-name {
+  font-weight: 600;
+  text-align: left;
+}
+
+.Auth .Tile {
+  display: flex;
+  flex-direction: row;
+  width: 20em;
+  height: 10em;
+  border: 1px solid #222;
+  margin-left: 1em;
+  background-color: #272727;
+}
+.Auth .Tile a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.Auth .Tile a:hover {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.Auth .Tile a:active {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.Auth .Tile a:visited {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.Auth .Tile .tile-text {
+  width: 15em;
+  padding-top: 3em;
+}
+
+.Auth .setup-account {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #1C1C1C;
+}
+
+.Auth .mobile-preview {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  width: 25em;
+  height: 100vh;
+  background-color: #1C1C1C;
+}
+.Auth .mobile-preview .section-title {
+  font-weight: 600;
+  font-size: 2em;
+  padding-left: 0.8em;
+  margin-top: 0.5em;
+}
+
+.Auth .GeneralDetails .content .record {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #222;
+  padding-left: 1em;
+  border-bottom: 1px solid #272727;
+  background-color: #1C1C1C;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.content .record .field-name {
+  width: 5em;
+  text-align: left;
+  border-right: 1px solid #333;
+}
+.content .record .field-value {
+  width: 20em;
+  text-align: left;
+  padding-left: 1em;
+}
