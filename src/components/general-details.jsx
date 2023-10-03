@@ -22,9 +22,9 @@ function GeneralDetails() {
     setBarType(`Speakeasy`);
   }, []);
   return (
-    <div className="GeneralDetails">
+    <div className="GeneralDetails InlineSection">
       <div className="header">
-        <h1 className="title">General</h1>
+        <h1 className="section-title">General</h1>
       </div>
       <div className="content">
         <div className="record">

@@ -120,8 +120,18 @@
   padding-left: 0.8em;
   margin-top: 0.5em;
 }
+.Details .content {
+  padding-left: 3em;
+}
+.Details .content .section-title {
+  padding-left: 0em;
+}
+.Auth .InlineSection .header {
+  padding-left: 3em;
+  text-align: left;
+}
 
-.Auth .GeneralDetails .content .record {
+.Auth .content .record {
   display: flex;
   flex-direction: row;
   border: 1px solid #222;
@@ -130,6 +140,7 @@
   background-color: #1C1C1C;
   padding-top: 1em;
   padding-bottom: 1em;
+  width: 55em;
 }
 
 .content .record .field-name {
@@ -141,4 +152,39 @@
   width: 20em;
   text-align: left;
   padding-left: 1em;
+}
+
+.Auth .Description  {
+  margin-top: 2em;
+}
+.Auth .Description .content .record .field-name {
+  width: 8em;
+  vertical-align: middle;
+}
+.Auth .Description .content .record .field-value {
+  width: 44em;
+}
+
+.Auth .save-details {
+  color: #0A84FF;
+  background-color: #000;
+  border: none;
+  font-size: 1em;
+}
+
+.Auth .place-horizontal {
+  width: 60vw;
+}
+.Auth .place-horizontal span {
+  font-size: 2em;
+  float: left;
+  clear: both;
+}
+.Auth .place-horizontal .save-details {
+  float: right;
+  padding-top: 1em;
+}
+
+div.clear {
+  clear: both;
 }

@@ -4,7 +4,7 @@ import DetailsView from '../../components/details';
 
 function Home() {
   return (
-    <div className="App Auth">
+    <div className="App Auth Details">
       <LeftNav/>
       <DetailsView/>
     </div>
