@@ -188,3 +188,19 @@
 div.clear {
   clear: both;
 }
+
+.Auth .SettingsView .content {
+  padding-left: 3em;
+}
+.Auth .SettingsView .content .field-name {
+  width: 8em;
+}
+.Auth .SettingsView .content .logout {
+  color: #FF453A;
+  background-color: #000;
+  border: none;
+  font-size: 1em;
+  float: left;
+  padding-left: 3em;
+  padding-top: 2em;
+}

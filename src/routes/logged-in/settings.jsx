@@ -1,14 +1,14 @@
 import '../../App.css';
 import LeftNav from '../../components/left-nav';
-import DetailsView from '../../components/details';
+import SettingsView from '../../components/settings';
 
-function Home() {
+function Settings() {
   return (
-    <div className="App Auth Details">
+    <div className="App Auth Settings">
       <LeftNav/>
-      <DetailsView/>
+      <SettingsView/>
     </div>
   );
 }
 
-export default Home;
+export default Settings;
