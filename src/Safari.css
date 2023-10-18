@@ -14,3 +14,12 @@
 html {
   background-color: black;
 }
+
+.App .App-header {
+  opacity: 0.4;
+}
+input.age-verification {
+  position: relative;
+  margin-right: 2em;
+  margin-top: 2em;
+}

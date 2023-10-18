@@ -10,6 +10,7 @@ function SignUp() {
   const pw = useRef('');
   const submitForm = () => {
     console.debug('TODO: stub');
+    window.location.href = '/auth/home';
   };
   useEffect(() => {
     console.debug('button state stub');

@@ -19,6 +19,9 @@ function DetailsView() {
   const saveDetails = () => {
     console.debug("TODO: fill logic to save data");
   };
+  const logOut = () => {
+    window.location.href = '/';
+  };
   useEffect(() => {
     /**
      * TODO: grab data from api
@@ -63,7 +66,7 @@ function DetailsView() {
       </div>
       <div className="content">
         <AccountSettings name={name} username={username} email={email} password={password}/>
-        <button className="logout">Log out</button>
+        <button className="logout" onClick={logOut}>Log out</button>
       </div>
       {showMobilePreview && (
         <MobilePreview/>
