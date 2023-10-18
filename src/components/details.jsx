@@ -6,6 +6,7 @@ import GeneralDetails from "./general-details";
 import Description from "./description";
 import Hours from "./hours";
 import Tile from "./tile";
+import MobilePreview from './mobile-preview'
 
 function DetailsView() {
   const [showSetupAccount, setShowSetupAccount] = useState(false);
@@ -76,17 +77,7 @@ function DetailsView() {
         <Hours />
       </div>
       {showMobilePreview && (
-        <>
-          <div className="right-nav">
-            <div className="mobile-preview">
-              <h2 className="section-title">Mobile Preview</h2>
-              <p>
-                Once you complete your profile, your bar app previews will
-                display here.
-              </p>
-            </div>
-          </div>
-        </>
+        <MobilePreview/>
       )}
     </div>
   );

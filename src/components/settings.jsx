@@ -3,6 +3,7 @@ import "../App.css";
 import "../Auth.css";
 import { Link } from "react-router-dom";
 import AccountSettings from "./account-settings";
+import MobilePreview from './mobile-preview';
 
 function DetailsView() {
   const [showSetupAccount, setShowSetupAccount] = useState(false);
@@ -65,17 +66,7 @@ function DetailsView() {
         <button className="logout">Log out</button>
       </div>
       {showMobilePreview && (
-        <>
-          <div className="right-nav">
-            <div className="mobile-preview">
-              <h2 className="section-title">Mobile Preview</h2>
-              <p>
-                Once you complete your profile, your bar app previews will
-                display here.
-              </p>
-            </div>
-          </div>
-        </>
+        <MobilePreview/>
       )}
     </div>
   );

@@ -1,7 +1,11 @@
+import useState from 'react';
 import logo from "../img/logo.png";
 import background from "../img/bg.jpg";
 import "../App.css";
 import { Link } from "react-router-dom";
+import React, { useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import BrowserSafari from '../components/browser-safari';
 
 function Root() {
   const signUp = () => {
@@ -20,6 +24,7 @@ function Root() {
           backgroundRepeat: "no-repeat",
         }}
       />
+    <BrowserSafari/>
       <div className="App-content">
         <img src={logo} className="App-logo" alt="logo" />
         <button onClick={signUp} className="sign-up">

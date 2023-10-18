@@ -1,0 +1,16 @@
+.App-header {
+  opacity: 1.0;
+}
+.Login .App-content {
+  opacity: 1.0;
+  background-color: black;
+}
+.HomeView {
+  background-color: black;
+}
+.HomeView h1,h2,p,.business-name,.field-name,.field-value {
+  color: white;
+}
+html {
+  background-color: black;
+}

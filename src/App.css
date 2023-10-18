@@ -24,6 +24,7 @@
   z-index: 11;
   opacity: 0.4;
 }
+
 .App-content {
   min-height: 100vh;
   display: flex;
@@ -237,4 +238,3 @@ input.age-verification {
   position: relative;
   top: -2.0em;
 }
-

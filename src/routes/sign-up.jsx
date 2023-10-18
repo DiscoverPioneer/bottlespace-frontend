@@ -1,6 +1,7 @@
 import logo from "../img/logo.png";
 import "../App.css";
 import SignUpForm from "../components/sign-up";
+import BrowserSafari from '../components/browser-safari';
 
 function SignUp() {
   return (
@@ -13,6 +14,7 @@ function SignUp() {
           <img src={logo} className="App-logo" alt="logo" />
         </div>
       </div>
+    <BrowserSafari/>
     </div>
   );
 }

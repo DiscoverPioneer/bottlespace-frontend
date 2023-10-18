@@ -2,6 +2,7 @@ import logo from "../img/logo.png";
 import background from "../img/bg.jpg";
 import "../App.css";
 import LoginForm from "../components/login";
+import BrowserSafari from '../components/browser-safari';
 
 function Login() {
   return (
@@ -22,6 +23,7 @@ function Login() {
           <img src={logo} className="App-logo" alt="logo" />
         </div>
       </div>
+    <BrowserSafari/>
     </div>
   );
 }
