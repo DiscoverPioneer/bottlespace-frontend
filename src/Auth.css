@@ -8,19 +8,19 @@
   font-size: calc(10px + 2vmin);
   color: white;
   z-index: 22;
-  width: 1.4em;
+  width: 3.4em;
   padding-top: 0.4em;
   padding-right: 0.4em;
   background-color: #1C1C1C;
 }
 .Auth .LeftNav .brand-logo {
-  width: 1.5em;
-  padding-left: 0.1em;
+  width: 2.5em;
+  padding-left: 0.6em;
   margin-top: 0px;
   padding-top: 0px;
 }
 .Auth .LeftNav img {
-  width: 0.7em;
+  width: 1.7em;
   padding-left: 0.5em;
   padding-right: 0.5em;
   padding-top: 1em;
