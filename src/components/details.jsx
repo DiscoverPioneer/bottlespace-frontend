@@ -15,6 +15,7 @@ function DetailsView() {
   const [taskCounter, setTaskCounter] = useState("3 tasks");
   const [showMobilePreview, setShowMobilePreview] = useState(true);
   const [showSaveButton, setShowSaveButton] = useState(true);
+  const [showThird,setShowThird] = useState(false);
   const saveDetails = () => {
     console.debug("TODO: fill logic to save data");
   };
@@ -65,7 +66,7 @@ function DetailsView() {
                   link="/auth/business/add-photos"
                 />
                 <Tile text="+ Add Menu PDF" link="/auth/business/add-menu" />
-                <Tile text="+ Add Description" link="/auth/business/add-desc" />
+          {showThird && <Tile text="+ Add Description" link="/auth/business/add-desc" />}
               </div>
             </div>
           </>

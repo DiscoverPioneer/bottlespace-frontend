@@ -12,6 +12,7 @@ function LeftNav() {
   const [businessName, setBusinessName] = useState('"PDT" Please Don\'t Tell');
   const [showBarAnalytics, setShowBarAnalytics] = useState(false);
   const [taskCounter,setTaskCounter] = useState('3 tasks');
+  const [showThird,setShowThird] = useState(false);
   useEffect(() => {
     /**
      * TODO: grab data from api
@@ -44,7 +45,7 @@ function LeftNav() {
             <div className="setup-tiles">
               <Tile text="+ Add Business Photos" link="/auth/business/add-photos"/>
               <Tile text="+ Add Menu PDF" link="/auth/business/add-menu"/>
-              <Tile text="+ Add Description" link="/auth/business/add-desc"/>
+              {showThird && (<Tile text="+ Add Description" link="/auth/business/add-desc"/>)}
             </div>
           </div>
         </>

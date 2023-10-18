@@ -238,3 +238,191 @@ input.age-verification {
   position: relative;
   top: -2.0em;
 }
+
+.Auth .HomeView .header {
+  max-width: 55em;
+  width: 55em;
+  margin-left: 5em;
+  padding-left: 0em;
+}
+.Auth .HomeView .content {
+  max-width: 55em;
+  width: 55em;
+  margin-left: 5em;
+  padding-left: 0em;
+}
+.Auth .HomeView .content .section-title {
+  margin-left: 1em;
+}
+.Auth .HomeView .header .setup-view-all {
+  color: #007AFF;
+  margin-left: 34em;
+}
+
+@media (max-width: 930px) {
+  /*
+  p {
+    background-color: red;
+  }
+  */
+  .MobilePreview .mobile-preview {
+    max-width: 18em;
+    width: 18em;
+  }
+  .Auth .HomeView .header {
+    max-width: 30em;
+    width: 30em;
+  }
+  .Auth .HomeView .content {
+    max-width: 30em;
+    width: 30em;
+  }
+  .Auth .setup-account {
+    max-width: 24em;
+  }
+  .Auth .setup-account .setup-tiles {
+    max-width: 40em;
+    width: 40em;
+    flex-direction: column;
+  }
+  .Auth .HomeView .content .record {
+    max-width: 30em;
+    width: 30em;
+    flex-direction: column;
+  }
+  .Auth .HomeView .content .record .field-name {
+    width: 27em;
+    border: none;
+  }
+  .Auth .HomeView .content .record .field-value{
+    width: 27em !important;
+  }
+  .Auth .HomeView .content .bar-analytics .analytics-tiles {
+    flex-direction: column;
+  }
+  .Auth .HomeView .header .setup-view-all {
+    width: 20em;
+    margin-left: 0em;
+  }
+  .Auth .place-horizontal .save-details {
+    width: 20em;
+    margin-left: 0em;
+    float: none;
+  }
+}
+@media (min-width: 931px) {
+  /*
+  p {
+    background-color: green;
+  }
+  */
+  .MobilePreview .mobile-preview {
+    max-width: 18em;
+    width: 18em;
+  }
+  .Auth .HomeView .header {
+    max-width: 42em;
+    width: 42em;
+  }
+  .Auth .HomeView .content{
+    max-width: 42em;
+    width: 42em;
+  }
+  .Auth .HomeView .content .record {
+    max-width: 37em;
+    width: 37em;
+  }
+  .Auth .HomeView .content .record .field-name {
+    width: 17em;
+  }
+  .Auth .HomeView .content .record .field-value{
+    width: 27em !important;
+  }
+  .Auth .HomeView .header .setup-view-all {
+    width: 20em;
+    margin-left: 25em;
+  }
+}
+@media (min-width: 931px) and (max-width: 950px) {
+  /*
+  p {
+    background-color: yellow;
+  }
+  */
+  .MobilePreview .mobile-preview {
+    max-width: 16em;
+    width: 16em;
+  }
+  .Auth .HomeView .header {
+    max-width: 40em;
+    width: 40em;
+  }
+  .Auth .HomeView .content{
+    max-width: 40em;
+    width: 40em;
+  }
+  .Auth .HomeView .content .record {
+    max-width: 37em;
+    width: 37em;
+  }
+  .Auth .HomeView .content .record .field-name {
+    width: 17em;
+  }
+  .Auth .HomeView .content .record .field-value{
+    width: 27em !important;
+  }
+}
+@media (min-width: 1024px) {
+  /*
+  p {
+    background-color: purple;
+  }
+  */
+  .MobilePreview .mobile-preview {
+    max-width: 18em;
+    width: 18em;
+  }
+  .Auth .HomeView .header {
+    max-width: 45em;
+    width: 45em;
+  }
+  .Auth .HomeView .content {
+    max-width: 45em;
+    width: 45em;
+  }
+  .Auth .HomeView .content .record {
+    max-width: 43em;
+    width: 43em;
+  }
+}
+.Auth .SettingsView .content {
+  padding-left: 0em !important;
+  margin-left: 5em;
+}
+.Auth .AccountSettings .content {
+  padding-left: 0em;
+}
+.Auth .InlineSection .header {
+  padding-left: 0em !important;
+  margin-left: 0em;
+}
+
+.Auth .GeneralDetails .content {
+  margin-left: 2em;
+}
+.Auth .Description .content {
+  margin-left: 2em;
+}
+.Auth .Hours .content {
+  margin-left: 2em;
+}
+
+.Auth .HomeView .content h1.section-title {
+  margin-left: 0em !important;
+}
+.Auth .HomeView .content .content {
+  margin-left: 0em !important;
+}
+.Auth .HomeView .content .record {
+  margin-left: 0em !important;
+}
