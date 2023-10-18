@@ -426,3 +426,34 @@ input.age-verification {
 .Auth .HomeView .content .record {
   margin-left: 0em !important;
 }
+
+.Auth .toggle-button {
+  color: white;
+}
+.Auth .toggle-button {
+  filter: invert(52%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+  font-size: 2em;
+  padding-left: 0.2em;
+  padding-top: 0.1em;
+  padding-right: 0.2em;
+  float: left;
+}
+.Auth .expand-toggle-button {
+  filter: invert(52%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+  font-size: 2em;
+  padding-left: 0.2em;
+  padding-top: 0.1em;
+  padding-right: 0.2em;
+  float: left;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 99;
+}
+.Auth .toggle-button:hover {
+  cursor: pointer;
+}
+
+.Auth .MobilePreviewHide {
+  display: none;
+}
