@@ -56,13 +56,12 @@ function DetailsView() {
       <div className="header">
         <div className="place-horizontal">
           <span className="business-name">Settings</span>
+        </div>
           {showSaveButton && (
             <button className="save-details pull-right" onClick={saveDetails}>
               Save
             </button>
           )}
-          <div className="clear"/>
-        </div>
       </div>
       <div className="content">
         <AccountSettings name={name} username={username} email={email} password={password}/>

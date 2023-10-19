@@ -1,6 +1,9 @@
 .Auth .MobileNav {
   display: none;
 }
+.Auth .HomeView .header .setup-view-all {
+  padding-bottom: 1em;
+}
 .Auth .LeftNav {
   position: fixed;
   top: 0px;
@@ -62,6 +65,7 @@
 }
 .Auth .header {
   padding-left: 5em;
+  padding-top: 1em;
 }
 
 .Auth .business-name {
@@ -176,7 +180,7 @@
 }
 
 .Auth .place-horizontal {
-  width: 60vw;
+  /*width: 60vw;*/
 }
 .Auth .place-horizontal span {
   font-size: 2em;
@@ -204,7 +208,6 @@ div.clear {
   border: none;
   font-size: 1em;
   float: left;
-  padding-left: 3em;
   padding-top: 2em;
 }
 @media (min-width: 180px) and (max-width: 720px)  {
@@ -222,13 +225,17 @@ div.clear {
     background-color: black;
   }
   .Auth .HomeView {
-    margin-top: 5em;
+    margin-top: 4em;
     padding-left: 0em;
     margin-left: 0em;
   }
   .Auth .HomeView .header {
     padding-left: 0em;
     margin-left: 1em;
+  }
+  .Auth .HomeView .header h1 {
+    margin-top: 0em;
+    padding-top: 0em;
   }
   .Auth .HomeView .content {
     padding-left: 0em;
@@ -265,11 +272,18 @@ div.clear {
   .Auth .HomeView .header .setup-view-all {
     width: 8em;
     text-align: left;
+    padding-bottom: 1em;
+  }
+  .Auth .HomeView .header .save-details {
+    width: 8em;
+    text-align: left;
   }
 }
 @media (min-width: 721px) {
   .Auth .MobilePreview .mobile-preview {
-    background-color: red;
     min-width: 30em;
   }
 }
+  .Auth .HomeView .header .save-details {
+    margin-top: 1em;
+  }

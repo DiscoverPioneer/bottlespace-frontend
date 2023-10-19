@@ -49,13 +49,12 @@ function DetailsView() {
       <div className="header">
         <div className="place-horizontal">
           <span className="business-name">Bar Details</span>
+        </div>
           {showSaveButton && (
-            <button className="save-details pull-right" onClick={saveDetails}>
+            <button className="save-details " onClick={saveDetails}>
               Save
             </button>
           )}
-          <div className="clear"/>
-        </div>
         {showSetupAccount && (
           <>
             <h2 className="section-title">Setup Your Account</h2>
