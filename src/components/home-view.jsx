@@ -31,7 +31,7 @@ function LeftNav() {
     /**
      * TODO: grab current setup tasks needed from api
      */
-    setTaskCounter('3 tasks');
+    setTaskCounter('View all 3 tasks');
   }, []);
   return (
     <div className="HomeView">

@@ -215,7 +215,6 @@ div.clear {
     display: block;
     border-bottom: 1px solid #333;
     position: fixed;
-    z-index: 199;
     left:0px;
     top: 0px;
     width: 100vw;
@@ -249,16 +248,28 @@ div.clear {
     max-height: 2em;
   }
   .Auth .MobilePreview {
-    display: none;
   }
   .Auth .right-nav .mobile-preview {
-    clear: both;
-    float: left;
+    min-width: 30em;
   }
   .Auth .analytics-tiles .AppGraph {
     max-width: 80vw;
   }
   .Auth .HomeView .content .record {
     max-width: 90vw;
+  }
+  .Auth .expand-toggle-button {
+    margin-top: 0.4em;
+    margin-right: 0.4em;
+  }
+  .Auth .HomeView .header .setup-view-all {
+    width: 8em;
+    text-align: left;
+  }
+}
+@media (min-width: 721px) {
+  .Auth .MobilePreview .mobile-preview {
+    background-color: red;
+    min-width: 30em;
   }
 }
