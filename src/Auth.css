@@ -1,3 +1,6 @@
+.Auth .MobileNav {
+  display: none;
+}
 .Auth .LeftNav {
   position: fixed;
   top: 0px;
@@ -203,4 +206,59 @@ div.clear {
   float: left;
   padding-left: 3em;
   padding-top: 2em;
+}
+@media (min-width: 180px) and (max-width: 720px)  {
+  .Auth .LeftNav {
+    display: none;
+  }
+  .Auth .MobileNav {
+    display: block;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    z-index: 199;
+    left:0px;
+    top: 0px;
+    width: 100vw;
+    padding-bottom: 1em;
+    background-color: black;
+  }
+  .Auth .HomeView {
+    margin-top: 5em;
+    padding-left: 0em;
+    margin-left: 0em;
+  }
+  .Auth .HomeView .header {
+    padding-left: 0em;
+    margin-left: 1em;
+  }
+  .Auth .HomeView .content {
+    padding-left: 0em;
+    margin-left: 1em;
+  }
+  .Auth .MobileNav .brand-logo {
+    max-height: 3em;
+    max-width: 3em;
+    float: left;
+    margin-left: 1.4em;
+  }
+  .Auth .MobileNav img {
+    margin-right: 1em;
+    margin-top: 1em;
+    float: left;
+    width: 2em;
+    max-height: 2em;
+  }
+  .Auth .MobilePreview {
+    display: none;
+  }
+  .Auth .right-nav .mobile-preview {
+    clear: both;
+    float: left;
+  }
+  .Auth .analytics-tiles .AppGraph {
+    max-width: 80vw;
+  }
+  .Auth .HomeView .content .record {
+    max-width: 90vw;
+  }
 }

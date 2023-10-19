@@ -516,6 +516,15 @@ input.age-verification {
     background-color: black;
   }
 }
+@media (min-width: 500px) and (max-width: 579px) {
+  .Login .App-content .LoginLeft .LoginForm {
+    margin-top: -240px;
+  }
+  .Login .SignUpForm {
+    padding-top: 1em;
+    margin-top: -244px;
+  }
+}
 @media (min-width: 580px) and (max-width: 720px) {
   .Login .App-content {
     display: flex;
@@ -533,7 +542,7 @@ input.age-verification {
   }
   .Login .SignUpForm {
     padding-top: 1em;
-    margin-top: -344px;
+    margin-top: -244px;
   }
   .Login .App-content {
     background-color: black;

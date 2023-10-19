@@ -61,8 +61,8 @@ function LeftNav() {
             </div>
           </div>
         )}
+        <MobilePreview/>
       </div>
-      <MobilePreview/>
     </div>
   );
 }

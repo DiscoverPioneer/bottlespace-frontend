@@ -15,11 +15,13 @@ function Root() {
     window.location.href = "/login";
   };
   useEffect(() => {
-    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    if(localStorage.getItem('debug') === 'true') {
+      const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+      const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 
-    let f = document.getElementById('debug');
-    f.innerHTML = [vw,'x',vh].join('');
+      let f = document.getElementById('debug');
+      f.innerHTML = [vw,'x',vh].join('');
+    }
   },[]);
   return (
     <div className="App">
