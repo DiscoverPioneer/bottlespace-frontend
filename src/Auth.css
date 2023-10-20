@@ -17,7 +17,7 @@
   width: 1.4em;
   padding-top: 0.4em;
   padding-right: 0.4em;
-  background-color: #1C1C1C;
+  background-color: #1c1c1c;
 }
 .Auth .LeftNav .brand-logo {
   width: 1.5em;
@@ -50,7 +50,7 @@
   border: 1px solid #222;
   margin: 0.5em 1em;
   padding: 0.8em 1em;
-  background-color: #1C1C1C;
+  background-color: #1c1c1c;
 }
 .Auth .analytics-tiles .ClickThrus {
   width: 20em;
@@ -110,16 +110,18 @@
 .Auth .setup-account {
   padding-top: 2em;
   padding-bottom: 2em;
-  background-color: #1C1C1C;
+  background-color: #1c1c1c;
 }
 
 .Auth .mobile-preview {
+  /*
   position: fixed;
   right: 0px;
   top: 0px;
+  */
   width: 25em;
   height: 100vh;
-  background-color: #1C1C1C;
+  background-color: #1c1c1c;
 }
 .Auth .mobile-preview .section-title {
   font-weight: 600;
@@ -144,7 +146,7 @@
   border: 1px solid #222;
   padding-left: 1em;
   border-bottom: 1px solid #272727;
-  background-color: #1C1C1C;
+  background-color: #1c1c1c;
   padding-top: 1em;
   padding-bottom: 1em;
   width: 55em;
@@ -161,7 +163,7 @@
   padding-left: 1em;
 }
 
-.Auth .Description  {
+.Auth .Description {
   margin-top: 2em;
 }
 .Auth .Description .content .record .field-name {
@@ -173,7 +175,7 @@
 }
 
 .Auth .save-details {
-  color: #0A84FF;
+  color: #0a84ff;
   background-color: #000;
   border: none;
   font-size: 1em;
@@ -203,14 +205,18 @@ div.clear {
   width: 8em;
 }
 .Auth .SettingsView .content .logout {
-  color: #FF453A;
+  color: #ff453a;
   background-color: #000;
   border: none;
   font-size: 1em;
   float: left;
   padding-top: 2em;
 }
-@media (min-width: 180px) and (max-width: 720px)  {
+@media (min-width: 180px) and (max-width: 720px) {
+  html {
+    background-color: black;
+    color: white;
+  }
   .Auth .LeftNav {
     display: none;
   }
@@ -218,7 +224,7 @@ div.clear {
     display: block;
     border-bottom: 1px solid #333;
     position: fixed;
-    left:0px;
+    left: 0px;
     top: 0px;
     width: 100vw;
     padding-bottom: 1em;
@@ -266,8 +272,7 @@ div.clear {
     max-width: 90vw;
   }
   .Auth .expand-toggle-button {
-    margin-top: 0.4em;
-    margin-right: 0.4em;
+    display: none;
   }
   .Auth .HomeView .header .setup-view-all {
     width: 8em;
@@ -278,12 +283,60 @@ div.clear {
     width: 8em;
     text-align: left;
   }
+  .Auth .right-nav .mobile-preview {
+    min-width: 98vw;
+    width: 98vw;
+  }
+  .Auth .right-nav .mobile-preview .section-title {
+    padding-top: 0.5em;
+  }
+  .Auth #canary-value {
+    display: none;
+  }
+  .Auth .SettingsView .MobilePreview {
+    /*margin-top: 2em;*/
+    display: none;
+  }
+  .Auth .HomeView .content .Description {
+    font-size: 10pt;
+    padding-right: 0.2em;
+  }
 }
 @media (min-width: 721px) {
+  .Auth #canary-value {
+    display: block;
+    left: -999em;
+    top: -999em;
+    position: absolute;
+  }
   .Auth .MobilePreview .mobile-preview {
     min-width: 30em;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+  }
+  .Auth .expand-toggle-button {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .Auth .collapse-toggle-button {
+    display: block;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    right: 0px;
+    top: 0px;
+    z-index: 399;
+    filter: invert(52%) saturate(1352%) hue-rotate(87deg) brightness(119%)
+      contrast(119%);
+    font-size: 2em;
+    padding-left: 0.2em;
+    padding-top: 0.1em;
+    padding-right: 0.2em;
   }
 }
-  .Auth .HomeView .header .save-details {
-    margin-top: 1em;
-  }
+.Auth .HomeView .header .save-details {
+  margin-top: 1em;
+}
