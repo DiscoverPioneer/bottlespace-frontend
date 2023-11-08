@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                             External Dependency                            */
 /* -------------------------------------------------------------------------- */
-import React from "react";
+//import React from "react";
 import Router from "next/router";
 import nextCookie from "next-cookies";
 

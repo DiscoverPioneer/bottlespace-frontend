@@ -53,7 +53,7 @@ axiosClient.interceptors.response.use(
 	(error) => {
 		if (
 			error.response &&
-			(error.response.data.message === "Token Expired." || error.response.status == 401)
+			(error.response.data.message === "Token Expired." || error.response.status === 401)
 		) {
 			Cookie.remove(config.userKey);
 			window.location.href = "/auth/login";
