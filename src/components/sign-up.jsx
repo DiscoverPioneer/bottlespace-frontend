@@ -1,4 +1,15 @@
 import React, { useRef, useState, useEffect } from 'react';
+import ApiClient, { axiosAPI } from "../services/axiosClient";
+import config from "../config";
+const axiosCall = config.PROXY_API ? axiosAPI : ApiClient;
+
+/* -------------------------------------------------------------------------- */
+/*                             Internal Dependency                            */
+/* -------------------------------------------------------------------------- */
+//import PageLayout from "components/layout";
+//import withPublicRoute from "./wrapper/withPublicRoute";
+import { useAuth } from "../services/apiService";
+import { toast } from "react-toastify";
 
 function SignUp() {
   /**
@@ -8,6 +19,7 @@ function SignUp() {
   const [buttonState,setButtonState] = useState('custom-button button-inactive submit');
   const barName = useRef('');
   const pw = useRef('');
+  const { loginCall,/*loginSso,*/ } = useAuth();
   const submitForm = () => {
     console.debug('TODO: stub');
     window.location.href = '/auth/home';
