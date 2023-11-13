@@ -3,6 +3,7 @@ import Cookie from "js-cookie";
 
 import config from "../../config";
 
+//console.debug({config});
 const axiosClient = axios.create({
 	baseURL: process.env.NEXT_PUBLIC_API_URL,
 	headers: {},
@@ -10,7 +11,7 @@ const axiosClient = axios.create({
 });
 
 const axiosAPI = axios.create({
-	baseURL:"/api"
+  baseURL:"/api/v1"
 });
 
 // Request Interceptor

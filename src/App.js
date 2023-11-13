@@ -15,7 +15,7 @@ function App() {
       element: <Root />,
     },
     {
-      path: "/login",
+      path: "/auth/login",
       element: <Login />,
     },
     {

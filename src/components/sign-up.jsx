@@ -51,6 +51,9 @@ function SignUp() {
     if(pw.current.value !== confirmPw.current.value){
       return {okay: false, message: 'Passwords do not match'};
     }
+    if(pw.current.value.length < 8){
+      return {okay: false, message: 'Passwords must be atleast 8 characters'};
+    }
     if(!certify.current.checked){
       return {okay: false,message: 'Please agree to the terms and conditions'};
     }
@@ -65,11 +68,9 @@ function SignUp() {
     let status = checkForm();
     if(!status.okay){
       setError(status.message);
-      //setButtonState('custom-button button-inactive submit');
       return;
     }
     setError(null);
-    //setButtonState('custom-button button-active submit');
     setIsSubmitting(true);
     createNewEstablishment(
       barName.current.value,
@@ -78,6 +79,7 @@ function SignUp() {
       pw.current.value
     ).then((resp) => {
       setApiError(null);
+      window.location.href = '/auth/home';
       console.debug({resp});
     }).catch((error) => {
       console.error({error});

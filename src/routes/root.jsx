@@ -12,7 +12,7 @@ function Root() {
     window.location.href = "/sign-up";
   };
   const login = () => {
-    window.location.href = "/login";
+    window.location.href = "/auth/login";
   };
   useEffect(() => {
     if(localStorage.getItem('debug') === 'true') {

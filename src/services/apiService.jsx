@@ -16,10 +16,8 @@ const axiosCall = config.PROXY_API ? axiosAPI : ApiClient;
 
 //const AuthContext = createContext({});
 
+const BASE_URL = "/api/v1";
 export const AuthService = {
-  currentUser: Cookie.get(config.userKey)
-    ? JSON.parse(Cookie.get(config.userKey))
-    : null,
   SetUpdateToken: async (data) => {
     const user = Cookie.get(config.userKey)
       ? JSON.parse(Cookie.get(config.userKey))
@@ -35,7 +33,7 @@ export const AuthService = {
   },
   resetPassword: async (resetHash, password, confirmPassword) => {
     try {
-      const response = await axiosCall.post(`/auth/reset-password`, {
+      const response = await axiosCall.post(`${BASE_URL}/auth/reset-password`, {
         resetHash,
         password,
         confirmPassword,
@@ -52,9 +50,12 @@ export const AuthService = {
   },
   forgotPassword: async (email) => {
     try {
-      const response = await axiosCall.post(`/auth/forgot-password`, {
-        email,
-      });
+      const response = await axiosCall.post(
+        `${BASE_URL}/auth/forgot-password`,
+        {
+          email,
+        }
+      );
       if (response.status === 200) {
         return formatSuccessResponse({
           data: response,
@@ -67,7 +68,7 @@ export const AuthService = {
   },
   loginCall: async (email, password) => {
     try {
-      const response = await axiosCall.post(`/auth/login`, {
+      const response = await axiosCall.post(`${BASE_URL}/auth/login`, {
         email,
         password,
       });
@@ -124,7 +125,7 @@ export const AuthService = {
   },
   searchUsers: async (firstName, lastName, email) => {
     try {
-      const response = await axiosCall.post(`/search-users`, {
+      const response = await axiosCall.post(`${BASE_URL}/search-users`, {
         firstName,
         lastName,
         email,
@@ -180,6 +181,30 @@ export const AuthService = {
       return formatErrorResponse(error);
     }
   },
+  GetHomeDashboard: async (establishmentId) => {
+    try {
+      const response = await axiosAPI.get(`/portal/${establishmentId}`);
+      if (response.status === 200) {
+        const data = response.data.data;
+        return formatSuccessResponse({ data });
+      }
+      return formatSuccessResponse({ data: response.data.data.token });
+    } catch (error) {
+      return formatErrorResponse(error);
+    }
+  },
+  UploadBusinessPhoto: async (establishmentId,data) => {
+    try {
+      const response = await axiosAPI.post(`/portal/${establishmentId}/image/upload`, data);
+      if (response.status === 200) {
+        const responseData = response.data.data;
+        return formatSuccessResponse({ data: responseData, });
+      }
+      return formatSuccessResponse({ data: response.data.data.token });
+    } catch (error) {
+      return formatErrorResponse(error);
+    }
+  },
   createNewEstablishment: async (
     establishmentName,
     ownerName,
@@ -187,15 +212,27 @@ export const AuthService = {
     password
   ) => {
     try {
-      const response = await axiosCall.post(`/auth/establishment/register`, {
-        establishmentName,
-        ownerName,
-        email,
-        password,
-      });
+      const response = await axiosCall.post(
+        `${BASE_URL}/auth/establishment/register`,
+        {
+          establishmentName,
+          ownerName,
+          email,
+          password,
+        }
+      );
       if (response.status === 200) {
-        const data = response.data.data;
-        return formatSuccessResponse({ data });
+        const user = {
+          ...response.data.data,
+        };
+        console.debug({ response, user });
+        if (user.token) {
+          await AuthService.setSession(user, user.expiresIn);
+          return formatSuccessResponse({
+            data: user.token ? user : response.data.data,
+          });
+        }
+        return formatErrorResponse("NO token");
       }
       return formatSuccessResponse({ data: response.data.data.token });
     } catch (error) {
@@ -235,6 +272,9 @@ export const AuthService = {
     Cookie.remove(config.userKey);
     return window.location.replace("/auth/login");
   },
+  currentUser: Cookie.get(config.userKey)
+    ? JSON.parse(Cookie.get(config.userKey))
+    : null,
 };
 
 //const authServiceValue = useMemo(() => authService, []);
