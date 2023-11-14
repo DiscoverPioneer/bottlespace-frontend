@@ -340,3 +340,34 @@ div.clear {
 .Auth .HomeView .header .save-details {
   margin-top: 1em;
 }
+.Auth .ImageGallery {
+  max-width: 100vw;
+  flex-direction: inherit;
+  display: flex;
+  flex-flow: wrap;
+}
+.Auth .UploadBusinessPhotos .image-record {
+  max-width: 24em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  border: 1px solid white;
+}
+.Auth .UploadBusinessPhotos .image-preview {
+  max-width: 20em;
+  min-height: 20em;
+}
+.Auth .UploadBusinessPhotos .image-bot button {
+  margin-top: 1em;
+  min-width: 50%;
+  border: none;
+  border-radius: 2em;
+}
+.Auth .UploadBusinessPhotos .image-bot button.delete {
+  background-color: #1c1c1c;
+  color: red;
+}
+.Auth .UploadBusinessPhotos .image-bot .set-as-profile {
+  background-color: #272727;
+  color: #0a84ff;
+}

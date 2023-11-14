@@ -7,6 +7,7 @@ import SignUp from "./routes/sign-up";
 import Home from "./routes/logged-in/home";
 import Details from "./routes/logged-in/details";
 import Settings from "./routes/logged-in/settings";
+import UploadBusinessPhotos from './routes/logged-in/upload-business-photos';
 
 function App() {
   const router = createBrowserRouter([
@@ -17,6 +18,10 @@ function App() {
     {
       path: "/auth/login",
       element: <Login />,
+    },
+    {
+      path: "/auth/business/add-photos",
+      element: <UploadBusinessPhotos/>,
     },
     {
       path: "/sign-up",

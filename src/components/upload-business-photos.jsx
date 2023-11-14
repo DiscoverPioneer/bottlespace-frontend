@@ -8,7 +8,8 @@ import Tile from "./tile";
 import MobilePreview from "./mobile-preview";
 import { AuthService } from "../services/apiService";
 
-function HomeView() {
+import ImageGallery from "./image-gallery";
+function UploadBusinessPhotos() {
   console.debug(JSON.stringify(AuthService));
   const [showSetupAccount, setShowSetupAccount] = useState(false);
   const [businessName, setBusinessName] = useState('"PDT" Please Don\'t Tell');
@@ -58,55 +59,20 @@ function HomeView() {
       })
       .catch((err) => {
         console.error({ err });
-        alert(err);
       });
   }, []);
   return (
-    <div className="HomeView">
+    <div className="UploadBusinessPhotos">
       <div className="header">
         <h1 className="business-name">{businessName}</h1>
-        {showSetupAccount && (
-          <>
-            <h2 className="section-title">Setup Your Account</h2>
-            <div className="setup-view-all">{taskCounter}</div>
-            <div className="setup-account">
-              <div className="setup-tiles">
-                <Tile
-                  text="+ Add Business Photos"
-                  link="/auth/business/add-photos"
-                />
-                <Tile text="+ Add Menu PDF" link="/auth/business/add-menu" />
-                {showThird && (
-                  <Tile
-                    text="+ Add Description"
-                    link="/auth/business/add-desc"
-                  />
-                )}
-              </div>
-            </div>
-          </>
-        )}
       </div>
       <div className="content">
         <div className="business-photos-upload">
-          <form action="/image/upload" method="POST">
-            <input type="file" ref={businessPhoto} accept="image/png, image/jpeg" />
-            <button onClick={submitBusinessPhoto}>Submit</button>
-          </form>
+          <ImageGallery/>
         </div>
-        {showBarAnalytics && (
-          <div className="bar-analytics">
-            <h2 className="section-title">Bar Analytics</h2>
-            <div className="analytics-tiles">
-              <CheckIns />
-              <ClickThrus />
-            </div>
-          </div>
-        )}
       </div>
-      <MobilePreview />
     </div>
   );
 }
 
-export default HomeView;
+export default UploadBusinessPhotos;
