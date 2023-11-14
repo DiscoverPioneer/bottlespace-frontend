@@ -18,6 +18,18 @@ const axiosCall = config.PROXY_API ? axiosAPI : ApiClient;
 
 const BASE_URL = "/api/v1";
 export const AuthService = {
+  GetPresignedURL: async (establishmentId) => {
+    try {
+      const response = await axiosAPI.get(`/portal/${establishmentId}/presigned/url`);
+      if (response.status === 200) {
+        const data = response.data.data;
+        return formatSuccessResponse({ data });
+      }
+      return formatSuccessResponse({ data: response.data.data.token });
+    } catch (error) {
+      return formatErrorResponse(error);
+    }
+  },
   SetUpdateToken: async (data) => {
     const user = Cookie.get(config.userKey)
       ? JSON.parse(Cookie.get(config.userKey))

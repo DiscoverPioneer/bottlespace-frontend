@@ -357,6 +357,9 @@ div.clear {
   max-width: 20em;
   min-height: 20em;
 }
+.Auth .UploadBusinessPhotos .image-bot button:hover {
+  cursor: pointer;
+}
 .Auth .UploadBusinessPhotos .image-bot button {
   margin-top: 1em;
   min-width: 50%;
@@ -366,6 +369,9 @@ div.clear {
 .Auth .UploadBusinessPhotos .image-bot button.delete {
   background-color: #1c1c1c;
   color: red;
+}
+.Auth .UploadBusinessPhotos .image-bot button.delete:hover {
+  filter: invert(100%);
 }
 .Auth .UploadBusinessPhotos .image-bot .set-as-profile {
   background-color: #272727;
