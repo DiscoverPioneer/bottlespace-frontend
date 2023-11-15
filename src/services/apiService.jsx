@@ -18,6 +18,26 @@ const axiosCall = config.PROXY_API ? axiosAPI : ApiClient;
 
 const BASE_URL = "/api/v1";
 export const AuthService = {
+  SaveS3Url: async (establishmentId, key, category, label, meta_data) => {
+    try {
+      if(!Array.isArray(meta_data)){
+        meta_data = [meta_data];
+      }
+      const response = await axiosAPI.post(`/portal/${establishmentId}/save/url`, {
+        category,
+        key,
+        meta_data,
+        label,
+      });
+      if (response.status === 200) {
+        const data = response.data.data;
+        return formatSuccessResponse({ data });
+      }
+      return formatSuccessResponse({ data: response.data.data.token });
+    } catch (error) {
+      return formatErrorResponse(error);
+    }
+  },
   GetPresignedURL: async (establishmentId) => {
     try {
       const response = await axiosAPI.get(`/portal/${establishmentId}/presigned/url`);
